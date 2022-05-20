@@ -1,6 +1,6 @@
 let array = ['java', 'javascript', 'python', 'html', 'css'];
-let maiorPalavra = 0
-let menorPalavra = 0
+let maiorPalavra = ''
+let menorPalavra = 'menor palavra'
 // for (let ind = 0, cont = 1; ind <= array.length; ind+= 1, cont+= 1) {
 //    if (array[ind] >= array[array.length - 1]) {
 //        menorPalavra = array[array.length - 1]  
@@ -11,14 +11,15 @@ let menorPalavra = 0
 
 // console.log('Menor palavra dentro do array: ', menorPalavra)
 // console.log('Maior palavra dentro do array: ', maiorPalavra);
-
 for (let cas of array) {
-  for (let cont = 0; cont <= array[array.length - 1]; cont+= 1) 
-    if(cas >= array[cont]) {
+
+    if (cas.length > maiorPalavra.length) {
+        maiorPalavra = cas
+    }
+    if (cas.length < menorPalavra.length) {
         menorPalavra = cas
-    } else {
-        menorPalavra = array[cont]
     }
 }
+console.log(maiorPalavra);
 
 console.log(menorPalavra);
