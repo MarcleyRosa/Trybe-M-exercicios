@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      
+      let elemento = document.createElement('h1');
+      elemento.innerText = "Exercício 5.2 - JavaScript DOM"
+      let listas =  document.body
+      listas.appendChild(elemento)
+      
+      let tagMain = document.createElement('main');
+      listas.appendChild(tagMain)
+      tagMain.className = "main-content"
+
+      let tagSect = document.createElement('section')
+      tagMain.appendChild(tagSect)
+      tagSect.className = "center-content"
+
+      let tagP = document.createElement('p')
+      tagSect.appendChild(tagP)
+      tagP.innerText = 'Testando as Tags'
+    
+      let tagSectDois = document.createElement('section')
+      tagMain.appendChild(tagSectDois)
+      tagSectDois.className = "left-content"
+
+      let tagSectTres = document.createElement('section')
+      tagMain.appendChild(tagSectTres)
+      tagSectTres.className = 'right-content'
+
+      let tagImg = document.createElement('img')
+      let tagSrc = document.createElement('src')
+      tagImg.src = 'link'
+      tagSectDois.appendChild(tagImg)
+
+
+      let listTag = document.createElement('ul')
+      let listDenTag = document.createElement('li')
+      tagSectTres.appendChild(listTag)
+      listTag.appendChild(listDenTag)
+      
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
