@@ -60,7 +60,6 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
 
 function authorUnique() {
  

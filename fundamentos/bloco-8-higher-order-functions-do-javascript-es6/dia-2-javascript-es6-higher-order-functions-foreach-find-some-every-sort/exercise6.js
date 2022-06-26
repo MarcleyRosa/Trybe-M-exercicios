@@ -60,8 +60,6 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
-  
 
 function someBookWasReleaseOnThe80s() {
   return books.some((el) => el.releaseYear > 1979 && el.releaseYear < 1990)

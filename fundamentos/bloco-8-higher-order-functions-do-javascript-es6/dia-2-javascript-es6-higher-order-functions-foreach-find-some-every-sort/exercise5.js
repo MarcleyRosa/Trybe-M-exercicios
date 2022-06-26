@@ -60,8 +60,6 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
-  // Adicione o código do exercício aqui:
 
 function everyoneWasBornOnSecXX() {
   return  books.every((el) => el.author.birthYear > 1901 && el.author.birthYear < 2000 )
