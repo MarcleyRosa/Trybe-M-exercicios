@@ -1,0 +1,29 @@
+* {
+  background-color: aquamarine;
+}
+
+.dex {
+  display: flex;
+  flex-direction: column;
+}
+
+.pokedex {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 20%;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+
+.left {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
