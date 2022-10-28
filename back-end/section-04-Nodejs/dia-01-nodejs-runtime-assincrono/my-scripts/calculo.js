@@ -13,4 +13,8 @@ const calculo = (num1, num2, num3) => {
     return promise
 }
 
-calculo(numero1, numero2, numero3)
+try {
+    calculo(numero1, numero2, numero3)
+} catch(error) {
+    console.log(error.message);
+}
