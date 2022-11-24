@@ -1,14 +1,15 @@
 'use strict';
 
-const { Sequelize } = require('sequelize');
+// const { Sequelize } = require('sequelize');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('books', {
+    await queryInterface.createTable('booksList', {
       id: {
         allowNull: false,
         autoIncrement: true,
+        primaryKey: true,
         type: Sequelize.INTEGER,
       },
       title: {
@@ -41,5 +42,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
+     await queryInterface.dropTable('books');
   }
 };
