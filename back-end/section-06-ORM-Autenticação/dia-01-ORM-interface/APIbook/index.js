@@ -12,3 +12,5 @@ app.get('/books', BooksController.getAll);
 app.get('/books/:id', BooksController.getFindById);
 
 app.post('/books', BooksController.createTableController);
+
+app.delete('/books/:id', BooksController.removeById)

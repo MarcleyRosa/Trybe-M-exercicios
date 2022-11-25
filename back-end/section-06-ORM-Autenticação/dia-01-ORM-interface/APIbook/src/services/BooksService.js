@@ -17,8 +17,15 @@ const { Book } = require('../models');
         return book;
     };
 
+    const remove  = async (id) => {
+        const remove = await Book.destroyer(Number(id));
+        console.log(remove);
+        return { type: null, message: 'Remove Successful'}
+    };
+
 module.exports = {
     getAll,
     getById,
     creats,
+    remove,
 }

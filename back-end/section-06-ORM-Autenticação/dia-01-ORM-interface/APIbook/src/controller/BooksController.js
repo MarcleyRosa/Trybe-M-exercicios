@@ -18,8 +18,15 @@ const createTableController = async (req, res) => {
     return res.status(200).json(book)
 };
 
+const removeById = async (req, res) => {
+    const { id } = req.params;
+    const remove = await booksService.remove(id);
+    return res.status(200).end()
+};
+
 module.exports = {
     getAll,
     getFindById,
     createTableController,
+    removeById,
 }
