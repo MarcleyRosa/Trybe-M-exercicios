@@ -1,9 +1,18 @@
 const booksService = require('../services/BooksService');
 
 const getAll = async (req, res) => {
-    const books = await booksService.getAll();
+    const { author } = req.query;
+  
+    let books;
+  
+    if (author) {
+      books = await booksService.getByAuthor(author);
+    } else {
+      books = await booksService.getAll();
+    }
+  
     res.status(200).json(books);
-};
+  };
 
 const getFindById = async (req, res) => {
     const { id } = req.params
@@ -24,9 +33,16 @@ const removeById = async (req, res) => {
     return res.status(200).end()
 };
 
+const getByNameAuthor = async (req, res) => {
+    const { author } = req.body;
+    const getAuthor = await booksService.getByAuthor(author);
+    return res.status(200).json(getAuthor)
+};
+
 module.exports = {
     getAll,
     getFindById,
     createTableController,
     removeById,
+    getByNameAuthor,
 }

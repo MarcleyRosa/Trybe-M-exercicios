@@ -13,7 +13,7 @@ const { Book } = require('../models');
     };
 
     const creats = async ({ title, author, pageQuantity }) => {
-        const book = await Book.create({ title, author, pageQuantity });
+        const book = await Book.create({ title, author, pageQuantity, publisher });
         return book;
     };
 
@@ -23,9 +23,15 @@ const { Book } = require('../models');
         return { type: null, message: 'Remove Successful'}
     };
 
+    const getByAuthor = async (author) => {
+        const getAuthor = await Book.findAll({ where: { author }, order: [['title', 'ASC']]});
+        return getAuthor;
+    };
+
 module.exports = {
     getAll,
     getById,
     creats,
     remove,
+    getByAuthor,
 }
