@@ -8,6 +8,12 @@ const getAllByEmployeeId = async (employeeId) => {
   return addresses;
 };
 
+const getAllByAdress = async (adress) => {
+    const addresses = await Address.findAll({ where: { employeeId }, order: { } });
+
+    return addresses;
+};
+
 module.exports = {
   getAllByEmployeeId,
 }
