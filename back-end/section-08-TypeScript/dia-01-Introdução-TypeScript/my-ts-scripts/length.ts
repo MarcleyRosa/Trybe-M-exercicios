@@ -1,4 +1,4 @@
-// ./length.ts
+import { exec } from './utils';
 
 const units = ["km", "hm", "dam", "m", "dm", "cm", "mm"];
 
@@ -9,3 +9,5 @@ function convert(value: number, fromUnit: string, toUnit: string): number {
 
     return value * Math.pow(10, exponent);
 }
+
+console.log(exec(convert));
