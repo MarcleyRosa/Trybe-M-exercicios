@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index"
+    "dev": "nodemon src/index",
+    "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create"
   },
   "keywords": [],
   "author": "",
@@ -13,12 +14,15 @@
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
     "@types/node": "18.11",
+    "mysql2": "2.3",
+    "sequelize-cli": "6.2",
     "typescript": "^4.9.3"
   },
   "dependencies": {
+    "@types/sequelize": "4.28",
     "dotenv": "10.0",
     "express": "4.17",
-    "mysql2": "2.3",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "sequelize": "6.3"
   }
 }
