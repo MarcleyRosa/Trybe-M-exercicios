@@ -16,14 +16,24 @@ module.exports = {
       },
       author_id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        foreignKey: true,
+        field: 'author_id',
+        references: {
+          model: 'authors',
+          key: 'id',
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
       },
       genre_id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        foreignKey: true
-      }
+        field: 'genre_id',
+        references: {
+          model: 'genres',
+          key: 'id',
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE',
+      },
      });
   },
 
