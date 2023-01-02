@@ -1,4 +1,4 @@
-const express =  require('express');
+import express from 'express';
 import userRoutes from './routes/userRouter';
 import postsRouter from './routes/postsRouter';
 import productsRouter from './routes/productsRouter';

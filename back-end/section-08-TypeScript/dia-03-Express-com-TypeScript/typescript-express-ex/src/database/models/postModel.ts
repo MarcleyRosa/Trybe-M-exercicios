@@ -1,7 +1,7 @@
 import { ResultSetHeader } from 'mysql2';
 
 import connection from './connection';
-import { IPost, Post } from '../interfaces';
+import { IPost, Post } from '../../interfaces';
 
 export async function getAll(): Promise<Post[]> {
   const query = 'SELECT * FROM Posts';

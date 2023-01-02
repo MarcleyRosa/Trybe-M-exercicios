@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { UserCredentials, IUser } from '../interfaces';
-import * as userModel from '../models/userModel';
+import * as userModel from '../database/models/userModel';
 import { secret, config } from '../middlewares/jwtConfig';
 import IToken from '../interfaces/IToken';
 

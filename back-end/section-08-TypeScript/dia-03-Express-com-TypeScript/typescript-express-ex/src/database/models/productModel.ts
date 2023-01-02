@@ -1,7 +1,7 @@
 import { ResultSetHeader } from 'mysql2';
 
 import connection from './connection';
-import { IProduct, Product } from '../interfaces';
+import { IProduct, Product } from '../../interfaces';
 
 export async function getAll(): Promise<Product[]> {
   const query = 'SELECT * FROM Products';

@@ -1,5 +1,5 @@
 import { IProduct } from '../interfaces';
-import * as productModel from '../models/productModel';
+import * as productModel from '../database/models/productModel';
 
 const MESSAGES = {
   PRODUCT_NOT_FOUND: 'Product not found',

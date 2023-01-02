@@ -1,5 +1,5 @@
 import { IRestaurant } from '../interfaces';
-import * as restaurantModel from '../models/restaurantModel';
+import * as restaurantModel from '../database/models/restaurantModel';
 
 const MESSAGES = {
   RESTAURANT_NOT_FOUND: 'Restaurant not found',

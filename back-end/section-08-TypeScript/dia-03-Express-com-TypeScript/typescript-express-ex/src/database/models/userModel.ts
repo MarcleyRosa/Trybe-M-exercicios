@@ -1,7 +1,7 @@
 import { ResultSetHeader } from 'mysql2';
 
 import connection from './connection';
-import { IUser, User } from '../interfaces';
+import { IUser, User } from '../../interfaces';
 
 export async function getAll(): Promise<User[]> {
   const query = 'SELECT * FROM Users';

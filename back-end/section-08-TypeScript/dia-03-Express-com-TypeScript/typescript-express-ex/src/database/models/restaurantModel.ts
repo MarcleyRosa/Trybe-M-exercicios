@@ -2,7 +2,7 @@
 import { ResultSetHeader } from 'mysql2';
 
 import connection from './connection';
-import { IRestaurant, Restaurant } from '../interfaces';
+import { IRestaurant, Restaurant } from '../../interfaces';
 
 export async function getAll(): Promise<Restaurant[]> {
   const query = 'SELECT * FROM Restaurants';
